@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context=".views.Agenda">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/others"
+        android:hint="Buscar Paciente"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColorHint="@color/login_form_datails" />
+
+    <Button
+        android:id="@+id/btn_buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_toEndOf="@+id/etBusca"
+        android:layout_toRightOf="@+id/etBusca"
+        android:background="@drawable/others"
+        android:text="Buscar"
+        android:textColor="@color/btn_busca"
+        android:textAllCaps="false"
+        tools:ignore="OnClick" />
+
+    <View
+        android:id="@+id/footer_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="134dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/etBusca"/>
+
+    <TextView
+        android:id="@+id/nomePacienteAgenda"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/footer_line"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="32dp"
+        android:hint="Nome Paciente"
+        android:padding="16dp"
+        android:textColorHint="@color/login_form_datails" />
+
+    <TextView
+        android:id="@+id/dtNascPac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/footer_line"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:background="@drawable/btn_bg"
+        android:hint="22/09/1990"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColorHint="@color/login_form_datails" />
+
+    <TextView
+        android:id="@+id/emailAgendaPac"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nomePacienteAgenda"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:background="@drawable/btn_bg"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColorHint="@color/login_form_datails" />
+
+    <TextView
+        android:id="@+id/cepAgenda"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailAgendaPac"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:layout_toStartOf="@+id/sexoAgenda"
+        android:layout_toLeftOf="@+id/sexoAgenda"
+        android:background="@drawable/btn_bg"
+        android:hint="CEP"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColorHint="@color/login_form_datails" />
+
+    <Spinner
+        android:id="@+id/sexoAgenda"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailAgendaPac"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/btn_bg"
+        android:entries="@array/sexo"
+        android:padding="16dp"
+        android:spinnerMode="dialog"
+        android:textColorHint="@color/login_form_datails"
+        app:layout_goneMarginTop="16dp" />
+
+    <EditText
+        android:id="@+id/dataAgendamento"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cepAgenda"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toStartOf="@+id/sexoAgenda"
+        android:layout_toLeftOf="@+id/sexoAgenda"
+        android:background="@drawable/btn_bg"
+        android:hint="22/02/2020 05:58"
+        android:inputType="date"
+        android:padding="16dp"
+        android:textColorHint="@color/login_form_datails" />
+
+
+    <TextView
+        android:id="@+id/valorAgendamento"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cepAgenda"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="228dp"
+        android:layout_marginLeft="228dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="-153dp"
+        android:layout_marginRight="-153dp"
+        android:layout_toStartOf="@+id/sexoAgenda"
+        android:layout_toLeftOf="@+id/sexoAgenda"
+        android:background="@drawable/btn_bg"
+        android:hint="R$ 200,00"
+        android:inputType="numberDecimal"
+        android:padding="16dp"
+        android:textColorHint="@color/login_form_datails" />
+
+    <Button
+        android:id="@+id/btn_agendar"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dataAgendamento"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/btn_bg"
+        android:text="Agendar"
+        android:textAllCaps="false"
+        android:textColor="@color/login_form_datails" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_agendar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/btn_bg"
+        android:text="Cancelar"
+        android:textAllCaps="false"
+        android:textColor="@color/btn_cancel" />
+    </RelativeLayout>
+</FrameLayout>

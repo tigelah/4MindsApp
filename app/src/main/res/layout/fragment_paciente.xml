@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_login"
+    tools:context=".views.Paciente">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="279dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="101dp"
+            android:layout_marginLeft="101dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:text="CADASTRO PACIENTE"
+            android:textColor="#071914"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/footer_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:background="#fff" />
+
+
+        <EditText
+            android:id="@+id/nomePaciente"
+            android:layout_width="381dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/footer_line"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_bg"
+            android:hint="Nome Paciente"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColorHint="@color/btn_busca"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/dtNasc"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/cpfoucnpj"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="208dp"
+            android:layout_marginRight="208dp"
+            android:background="@drawable/btn_bg"
+            android:hint="Data Nasc."
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColorHint="@color/btn_busca" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="381dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/telefone"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="15dp"
+
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_bg"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColorHint="@color/btn_busca" />
+
+        <Spinner
+            android:id="@+id/sexo"
+            android:layout_width="149dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/nomePaciente"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_bg"
+            android:entries="@array/sexo"
+            android:padding="16dp"
+            android:spinnerMode="dialog"
+            android:textColorHint="@color/login_form_datails"
+            app:layout_goneMarginTop="16dp" />
+
+        <EditText
+            android:id="@+id/cpfoucnpj"
+            android:layout_width="228dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/nomePaciente"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="171dp"
+            android:layout_marginRight="171dp"
+            android:background="@drawable/btn_bg"
+            android:hint="CPF"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColorHint="@color/btn_busca" />
+
+        <Spinner
+            android:id="@+id/estadoCivil"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/cpfoucnpj"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/btn_bg"
+            android:entries="@array/estadoCivil"
+            android:padding="16dp"
+            android:spinnerMode="dialog"
+            android:textColorHint="@color/login_form_datails"
+            app:layout_goneMarginTop="16dp" />
+
+        <EditText
+            android:id="@+id/telefone"
+            android:layout_width="185dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/endereco"
+            android:layout_marginStart="207dp"
+            android:layout_marginLeft="207dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_bg"
+            android:hint="Telefone"
+            android:inputType="number"
+            android:padding="16dp"
+            android:textColorHint="@color/btn_busca" />
+
+        <EditText
+            android:id="@+id/cep"
+            android:layout_width="185dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/endereco"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="210dp"
+            android:layout_marginRight="210dp"
+            android:background="@drawable/btn_bg"
+            android:hint="CEP"
+            android:inputType="number"
+            android:padding="16dp"
+            android:textColorHint="@color/btn_busca" />
+
+        <EditText
+            android:id="@+id/endereco"
+            android:layout_width="381dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/dtNasc"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_bg"
+            android:hint="Endereço"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColorHint="@color/btn_busca" />
+
+        <Button
+            android:id="@+id/btn_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="133dp"
+            android:layout_toStartOf="@+id/btn_salvar"
+            android:layout_toLeftOf="@+id/btn_salvar"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/cancelar"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_cancel" />
+
+        <Button
+            android:id="@+id/btn_salvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="99dp"
+            android:layout_marginRight="99dp"
+            android:layout_marginBottom="132dp"
+            android:background="@color/dark_blue"
+            android:text="@string/salvar"
+            android:textAllCaps="false" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
