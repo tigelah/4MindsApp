@@ -39,15 +39,15 @@ class Agenda : Fragment() {
 
             val buscar = etBuscar.text.toString()
 
-            var nome:String? = "Juliana Monteiro"
+            var nome:String? = ""
 
-            if (buscar.equals("Juliana Monteiro")) {
-                nomePacienteAgenda1?.text = "Juliana Monteiro"
-                dtNascPac?.text = "05/11/1991"
-                emailAgendaPac?.text = "peroladaju@gmail.com"
-                cepAgenda?.text = "38220834"
-                dataAgendamento.setText("22/02/2020 05:58")
-                valorAgendamento.text = "R$ 200,00"
+            if (buscar.equals("")) {
+                nomePacienteAgenda1?.text = ""
+                dtNascPac?.text = ""
+                emailAgendaPac?.text = ""
+                cepAgenda?.text = ""
+                dataAgendamento.setText("")
+                valorAgendamento.text = ""
             }
             Thread.sleep(500)
             nomePacienteAgenda1.setEnabled(false)
@@ -77,28 +77,6 @@ class Agenda : Fragment() {
 
             val jsonFormPretty: String = gsonPretty.toJson(form)
 
-
-//            val form = """{
-//    \"paciente\": {
-//        \"id\": 1
-//    },
-//    \"enderecoDeConsulta\": {
-//        \"id\": 1
-//    },
-//    \"pagamento\": {
-//        \"numeroDeParcelas\": 5,
-//        \"@type\": "pagamentoComCartao"
-//    },
-//    \"itens\": [
-//        {
-//            \"quantidade\": 1,
-//            \"psicologo\": {
-//                \"id\": 1
-//            }
-//        }
-//
-//    ]
-//}""".trimMargin())
 
 
             ClientFourMinds.endpoint.agendarSessao(arguments?.get("token"),jsonFormPretty)
